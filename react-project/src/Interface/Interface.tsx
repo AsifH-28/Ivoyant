@@ -1,4 +1,4 @@
-interface todo{
+export interface todo{
     userId:number,
     id:number,
     title: string,
@@ -8,3 +8,5 @@ interface todo{
 export interface todos{
     todos:todo[]
 }
+
+export const url ="https://jsonplaceholder.typicode.com/todos/";
