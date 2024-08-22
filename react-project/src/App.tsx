@@ -2,9 +2,20 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import { todos } from './Interface/Interface'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
+  const Fetch = async () =>{
+    const response  = await fetch('https://jsonplaceholder.typicode.com/todos/1',{
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+      }
+    }) 
+    const data = await response.json() as todos;
+    console.log(data.todos);
+  }
 
   return (
     <>
