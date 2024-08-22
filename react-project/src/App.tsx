@@ -20,7 +20,7 @@ function App() {
     console.log(data);
   };
   useEffect(() => {
-    // Fetch();
+    Fetch();
   }, []);
 
   const postData = async () => {
