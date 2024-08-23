@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { useFetch } from "../CustomHooks/useFetch";
 
 export default function PostRequestComponent() {
@@ -24,8 +23,6 @@ export default function PostRequestComponent() {
     console.log(err);
   }
 
-  const [isClicked, setIsClicked] = useState(false);
-  const [todos, SetTodo] = useState([]);
 
   return (
     <div>
