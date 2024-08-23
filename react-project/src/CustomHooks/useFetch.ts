@@ -7,9 +7,10 @@ export interface GetOptions extends RequestInit {
 interface GetResponse<T> {
   data: T | null;
   err: string | null;
+  ApiCall:()=>Promise<void>
 }
 
-export const useFetch = (url: string, method: string, options: GetOptions) => {
+export const useFetch = (url: string, method: string, options: GetOptions):GetResponse<any> => {
   const [data, setData] = useState();
   const [err, setErr] = useState(null);
 

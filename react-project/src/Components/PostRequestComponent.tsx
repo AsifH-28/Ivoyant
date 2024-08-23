@@ -2,6 +2,7 @@ import { useFetch } from "../CustomHooks/useFetch";
 
 export default function PostRequestComponent() {
   let CustomHookUtilityFunction: () => Promise<void>;
+  var errorMessage;
   try {
     const { data, err, ApiCall } = useFetch(
       "https://jsonplaceholder.typicode.com/todos/",
@@ -16,13 +17,13 @@ export default function PostRequestComponent() {
         }),
       }
     );
+    errorMessage = err;
     console.log(data);
     CustomHookUtilityFunction = ApiCall;
   } catch (err) {
     console.log("Error");
     console.log(err);
   }
-
 
   return (
     <div>
