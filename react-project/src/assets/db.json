@@ -1,0 +1,137 @@
+{
+    "Products":[
+        {
+          "id": 1,
+          "name": "Wireless Mouse",
+          "description": "Ergonomic wireless mouse with customizable buttons.",
+          "price": 29.99,
+          "inStock": true,
+          "category": "Electronics",
+          "sku": "WM12345",
+          "imageUrl": "https://example.com/products/wireless-mouse.jpg",
+          "rating": 4.5,
+          "tags": ["electronics", "mouse", "wireless"]
+         
+        },
+        {
+          "id": 2,
+          "name": "Bluetooth Headphones",
+          "description": "Noise-cancelling over-ear Bluetooth headphones.",
+          "price": 89.99,
+          "inStock": false,
+          "category": "Electronics",
+          "sku": "BH67890",
+          "imageUrl": "https://example.com/products/bluetooth-headphones.jpg",
+          "rating": 4.7,
+          "tags": ["electronics", "headphones", "bluetooth"]
+         
+        },
+        {
+          "id": 3,
+          "name": "Standing Desk",
+          "description": "Adjustable height standing desk with memory presets.",
+          "price": 299.99,
+          "inStock": true,
+          "category": "Furniture",
+          "sku": "SD11223",
+          "imageUrl": "https://example.com/products/standing-desk.jpg",
+          "rating": 4.8,
+          "tags": ["furniture", "desk", "adjustable"]
+        
+        },
+        {
+          "id": 4,
+          "name": "Laptop Sleeve",
+          "description": "Water-resistant laptop sleeve for 13-inch laptops.",
+          "price": 19.99,
+          "inStock": true,
+          "category": "Accessories",
+          "sku": "LS44556",
+          "imageUrl": "https://example.com/products/laptop-sleeve.jpg",
+          "rating": 4.3,
+          "tags": ["accessories", "laptop", "sleeve"]
+         
+        },
+        {
+          "id": 5,
+          "name": "Gaming Keyboard",
+          "description": "Mechanical gaming keyboard with RGB lighting.",
+          "price": 59.99,
+          "inStock": true,
+          "category": "Electronics",
+          "sku": "GK78901",
+          "imageUrl": "https://example.com/products/gaming-keyboard.jpg",
+          "rating": 4.6,
+          "tags": ["electronics", "keyboard", "gaming"]
+          
+        },
+        {
+          "id": 6,
+          "name": "Fitness Tracker",
+          "description": "Fitness tracker with heart rate monitor and GPS.",
+          "price": 49.99,
+          "inStock": false,
+          "category": "Wearables",
+          "sku": "FT33567",
+          "imageUrl": "https://example.com/products/fitness-tracker.jpg",
+          "rating": 4.4,
+          "tags": ["wearables", "fitness", "tracker"]
+        
+        },
+        {
+          "id": 7,
+          "name": "Portable Charger",
+          "description": "High-capacity portable charger with fast charging.",
+          "price": 39.99,
+          "inStock": true,
+          "category": "Accessories",
+          "sku": "PC89012",
+          "imageUrl": "https://example.com/products/portable-charger.jpg",
+          "rating": 4.2,
+          "tags": ["accessories", "charger", "portable"]
+         
+        },
+        {
+          "id": 8,
+          "name": "Smart Thermostat",
+          "description": "Wi-Fi enabled smart thermostat with voice control.",
+          "price": 129.99,
+          "inStock": true,
+          "category": "Home Automation",
+          "sku": "ST55678",
+          "imageUrl": "https://example.com/products/smart-thermostat.jpg",
+          "rating": 4.7,
+          "tags": ["home automation", "thermostat", "smart"]
+          
+        },
+        {
+          "id": 9,
+          "name": "Electric Kettle",
+          "description": "Stainless steel electric kettle with temperature control.",
+          "price": 49.99,
+          "inStock": true,
+          "category": "Kitchen Appliances",
+          "sku": "EK23456",
+          "imageUrl": "https://example.com/products/electric-kettle.jpg",
+          "rating": 4.5,
+          "tags": ["kitchen", "appliances", "kettle"]
+    
+        },
+        {
+          "id": 10,
+          "name": "Noise-Cancelling Earbuds",
+          "description": "True wireless noise-cancelling earbuds with charging case.",
+          "price": 79.99,
+          "inStock": false,
+          "category": "Electronics",
+          "sku": "NC34567",
+          "imageUrl": "https://example.com/products/noise-cancelling-earbuds.jpg",
+          "rating": 4.4,
+          "tags": ["electronics", "earbuds", "wireless"]
+         
+        }
+      ]
+      
+}
+
+
