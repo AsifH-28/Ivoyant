@@ -12,7 +12,7 @@ export const AddToCartSlice = createSlice({
         if(!flag){
             state.push(AddProduct)
         }else{
-            alert("Product Already exist")
+            alert("Product Already Exist In Cart")
         }
         
     },

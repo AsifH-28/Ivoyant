@@ -21,12 +21,12 @@ export default function CartProducts() {
             <p className="product-description">{item.description}</p>
             <p className="product-price">{item.price}</p>
             <button
-              className="product-button"
+              className="product-Removebutton"
               onClick={() => {
                 dispatch(RemoveFromCart(item.id));
               }}
             >
-              Remove to Cart
+              Remove From Cart
             </button>
           </div>
         );
