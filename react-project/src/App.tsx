@@ -1,46 +1,25 @@
-
-import { useGetProductsQuery, usePostProductMutation } from "./Api/Api";
+import { Routes,Route,Link } from "react-router-dom";
+import HomePage from "./Components/HomePage";
 import AddProduct from "./Components/AddProduct";
 import UpdateProduct from "./Components/UpdateProduct";
-import "./StyleSheet/Style.css"
+import { NavLink } from "react-router-dom";
+import PageNotFoundTemplate from "./Components/PageNotFoundTemplate";
 
 function App() {
-
+  return (<>
+  <nav style={{width:"300px",display:"flex",justifyContent:"space-between", alignItems:"center"}}>
+  <NavLink to={"AddProduct"}>Add Product</NavLink>
+  <NavLink to={"UpdateProduct"}>Update Product</NavLink>
+  </nav>
  
-
-  const { data, isFetching, isLoading, isSuccess, isError } = useGetProductsQuery();
-
-  const [PostMethod] = usePostProductMutation();
-  console.log(data);
-
-  return(
-    <div className="container">
-      {isError?<>Some Issue occured</> :<></>}
-      {isLoading ? (
-        <h1>...Loading</h1>
-      ) : (
-        data?.map((item) => {
-          return (
-            <div className="product-card" key={item.id}>
-              {item.id}
-              <img
-                src={item.imageUrl ? item.imageUrl : undefined}
-                className="product-image"
-              ></img>
-              <h2 className="product-name">{item.name}</h2>
-              <p className="product-description">{item.description}</p>
-              <p className="product-price">{item.price}</p>
-             
-            </div>
-          );
-        })
-      )}
-      <AddProduct />
-      <UpdateProduct />
-    </div>
-  );
-
+  <Routes>
+    <Route path="/" element={<HomePage />} />
+    <Route path="AddProduct" element={<AddProduct />} />
+    <Route path="UpdateProduct" element={<UpdateProduct />} />
+    <Route path="*" element={<PageNotFoundTemplate />}/>
+  </Routes>
   
+  </>);
 }
 
 export default App;
