@@ -4,8 +4,10 @@ import { Product } from "../Interface/interface";
 import { useSelector } from "react-redux";
 import { RootState } from "../Redux Store/store";
 import "../StyleSheet/Form.css";
+import { useNavigate } from "react-router-dom";
 
 export default function UpdateProduct() {
+  const navigate = useNavigate();
   const [product, setProduct] = useState<Product>({
     id: 0,
     name: "",
@@ -146,6 +148,13 @@ export default function UpdateProduct() {
 <button onClick={()=>{
 UpdateProduct(product);
 }}>update</button>
+  <button onClick={()=>{
+          navigate("/")
+      }}>Home</button>
+      <br/>
+         <button onClick={()=>{
+          navigate(-1)
+      }}>Back</button>
     </form>
   );
 }

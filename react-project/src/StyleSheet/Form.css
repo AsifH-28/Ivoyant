@@ -45,9 +45,10 @@ body, h1, p, ul {
     resize: vertical;
   }
   
-  button[type="submit"] {
+  button {
     width: 100%;
     padding: 10px;
+    margin: 10px;
     border: none;
     border-radius: 5px;
     background-color: #007bff;
@@ -57,7 +58,7 @@ body, h1, p, ul {
     transition: background-color 0.3s ease;
   }
   
-  button[type="submit"]:hover {
+  button:hover {
     background-color: #0056b3;
   }
   

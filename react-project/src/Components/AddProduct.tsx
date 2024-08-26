@@ -2,9 +2,11 @@ import { ChangeEvent, useState } from "react";
 import "../StyleSheet/Form.css";
 import { Product } from "../Interface/interface";
 import { usePostProductMutation } from "../Api/Api";
+import { useNavigate } from "react-router-dom";
 
 export default function AddProduct() {
   const [PostProduct] = usePostProductMutation();
+  const navigate = useNavigate();
   const [product, setProduct] = useState<Product>({
     id: 0,
     name: "",
@@ -53,7 +55,7 @@ export default function AddProduct() {
   };
 
   return (
-    <form onSubmit={handleFormSubmit}>
+    <form onSubmit={handleFormSubmit} className="form-container">
       <div className="form-group">
         <label htmlFor="id">Product ID:</label>
         <input
@@ -176,6 +178,14 @@ export default function AddProduct() {
       </div>
 
       <button type="submit">Submit</button>
+      <br/>
+      <button onClick={()=>{
+          navigate("/")
+      }}>Home</button>
+      <br/>
+         <button onClick={()=>{
+          navigate(-1)
+      }}>Back</button>
     </form>
   );
 }

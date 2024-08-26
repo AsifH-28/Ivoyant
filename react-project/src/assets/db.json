@@ -2,14 +2,14 @@
   "Products": [
     {
       "id": "1",
-      "name": "Wireless Mousehhh",
+      "name": "Wired Mouse",
       "description": "Ergonomic wireless mouse with customizable buttons.",
       "price": 1009.99,
-      "inStock": false,
+      "inStock": "on",
       "category": "Electronics",
       "sku": "WM12345",
       "imageUrl": "https://example.com/products/wireless-mouse.jpg",
-      "rating": 4.5,
+      "rating": "3.5",
       "tags": [
         "electronics",
         "mouse",
@@ -74,6 +74,46 @@
       "rating": "2",
       "tags": [
         "gsgsgs"
+      ]
+    },
+    {
+      "id": "10",
+      "name": "Cycle",
+      "description": "ByCycle for boys",
+      "price": "7000",
+      "inStock": true,
+      "category": "bycycle",
+      "sku": "asahjshashka",
+      "imageUrl": "https://react.dev/reference/react/Component#catching-rendering-errors-with-an-error-boundary",
+      "rating": "2",
+      "tags": [
+        "Bycycle"
+      ]
+    },
+    {
+      "id": "100",
+      "name": "Cycle",
+      "description": "Bycycle for girls",
+      "price": "10000",
+      "inStock": true,
+      "category": "Bycycle",
+      "sku": "saasa",
+      "imageUrl": "https://example.com/products/wireless-mouse.jpg",
+      "rating": "4",
+      "tags": "sasasdndndn"
+    },
+    {
+      "id": "1000",
+      "name": "Cycle",
+      "description": "Bycycle for boys",
+      "price": "12222",
+      "inStock": true,
+      "category": "Bycycle",
+      "sku": "SASASAS",
+      "imageUrl": "https://example.com/products/wireless-mouse.jpg",
+      "rating": "3",
+      "tags": [
+        "#bycycle"
       ]
     }
   ]
