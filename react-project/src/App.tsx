@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import "./App.css";
 import { todos, url, todo } from "./Interface/Interface";
-import GetRequestComponent from "./Components/GetRequestComponent";
+import GetRequestComponent from "./Components/GetRequestComponent"
 import PostRequestComponent from "./Components/PostRequestComponent";
 
 function App() {
