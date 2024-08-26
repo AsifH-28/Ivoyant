@@ -1,0 +1,80 @@
+{
+  "Products": [
+    {
+      "id": "1",
+      "name": "Wireless Mousehhh",
+      "description": "Ergonomic wireless mouse with customizable buttons.",
+      "price": 1009.99,
+      "inStock": false,
+      "category": "Electronics",
+      "sku": "WM12345",
+      "imageUrl": "https://example.com/products/wireless-mouse.jpg",
+      "rating": 4.5,
+      "tags": [
+        "electronics",
+        "mouse",
+        "wireless"
+      ]
+    },
+    {
+      "id": "2",
+      "name": "Bluetooth Headphones",
+      "description": "Noise-cancelling over-ear Bluetooth headphones.",
+      "price": 89.99,
+      "inStock": false,
+      "category": "Electronics",
+      "sku": "BH67890",
+      "imageUrl": "https://example.com/products/bluetooth-headphones.jpg",
+      "rating": 4.7,
+      "tags": [
+        "electronics",
+        "headphones",
+        "bluetooth"
+      ]
+    },
+    {
+      "id": "3",
+      "name": "Standing Desk",
+      "description": "Adjustable height standing desk with memory presets.",
+      "price": 299.99,
+      "inStock": true,
+      "category": "Furniture",
+      "sku": "SD11223",
+      "imageUrl": "https://example.com/products/standing-desk.jpg",
+      "rating": 4.8,
+      "tags": [
+        "furniture",
+        "desk",
+        "adjustable"
+      ]
+    },
+    {
+      "id": "9",
+      "name": "cycle",
+      "description": "ByCycle Products",
+      "price": "7000",
+      "inStock": true,
+      "category": "Bycycle",
+      "sku": "saasa",
+      "imageUrl": "https://i5.walmartimages.com/asr/3ebb58bc-6610-4376-a86a-1890ae4f2fc7.8b333297ee6a1e7c49eafaee79824146.jpeg",
+      "rating": "0.9",
+      "tags": [
+        "bycycle"
+      ]
+    },
+    {
+      "id": "0444",
+      "name": "Asif H",
+      "description": "gsdgdggd",
+      "price": "133223",
+      "inStock": true,
+      "category": "shshs",
+      "sku": "sgsgsg",
+      "imageUrl": "https://react.dev/reference/react/Component#catching-rendering-errors-with-an-error-boundary",
+      "rating": "2",
+      "tags": [
+        "gsgsgs"
+      ]
+    }
+  ]
+}
