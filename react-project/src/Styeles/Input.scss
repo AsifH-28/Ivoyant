@@ -1,0 +1,29 @@
+.todo-form {
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: #f0f8ff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 100px;
+  
+    .ant-input,
+    .ant-picker {
+      border-radius: 5px;
+      padding: 8px;
+    }
+  
+    .ant-btn-primary {
+      width: 100%;
+      background-color: #3498db;
+      border-color: #3498db;
+  
+      &:hover,
+      &:focus {
+        background-color: #2980b9;
+        border-color: #2980b9;
+      }
+    }
+  }
+
+ 
