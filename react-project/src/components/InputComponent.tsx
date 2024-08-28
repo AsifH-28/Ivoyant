@@ -1,30 +1,44 @@
 import { Form, Input, DatePicker, Select, Button } from "antd";
 import "../Styeles/Input.scss";
-import {AddTodo} from "../features/Todo"
+import { AddTodo } from "../features/Todo";
 import { useDispatch } from "react-redux";
 import { Dispatch } from "../ReduxStore/store";
+import { notification } from "antd";
+import { useNavigate } from "react-router-dom";
 
 const { TextArea } = Input;
 const { Option } = Select;
 
 export default function InputComponent() {
-    const dispatch = useDispatch<Dispatch>()
+  const dispatch = useDispatch<Dispatch>();
+  const navigate = useNavigate();
   const [form] = Form.useForm();
+  const openNotification = (Title: string) => {
+   
+    notification.open({
+      message: `${Title}`,
+      description: "Above Todo is Added click to see",
+      onClick: () => {
+        navigate("all-tasks");
+      },
+    });
+  };
 
   const handleAddTodo = (e: any) => {
-    const now = new Date;
+    const now = new Date();
     const AddDetails = {
-        ...e,id:Math.random(),
-        completed:false,
-        createdAt:now.toDateString(),
-        deleted:false,
-        pending:false,
-        dueDate:e.dueDate.toISOString(),
-
-
-    }
-    dispatch(AddTodo(AddDetails))
+      ...e,
+      id: Math.random()+1,
+      completed: false,
+      createdAt: now.toDateString(),
+      deleted: false,
+      pending: false,
+      dueDate: e.dueDate.toISOString(),
+    };
+    dispatch(AddTodo(AddDetails));
     form.resetFields();
+
+    openNotification(e.title);
   };
   return (
     <Form
