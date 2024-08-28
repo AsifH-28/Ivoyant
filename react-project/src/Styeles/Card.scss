@@ -1,0 +1,42 @@
+.cardOuter {
+    margin-top: 16px;
+    border-radius: 8px;
+    border: 1px solid #1890ff; // Blue border
+    background-color: #f0f5ff; // Light blue background
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Shadow for depth
+  }
+  
+  .cardInner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+  
+    .description {
+      color: #595959;
+    }
+  
+    .deadlineInfo {
+      display: flex;
+      align-items: center;
+  
+      .deadlineLabel {
+        color: #ff4d4f; // Red color for deadline label
+        font-weight: bold;
+      }
+  
+      .deadlineDate {
+        margin: 0 10px;
+        color: #1890ff; // Blue color for deadline date
+      }
+  
+      .time {
+        color: #a0a0a0; // Grey color for time
+      }
+    }
+  
+    .moreLink {
+      color: #1890ff; // Blue color for "More" link
+    }
+  }
+  
