@@ -10,5 +10,5 @@ export interface Todo {
     deleted?: boolean;
     pending?:boolean;         
   }
-  
+ 
   

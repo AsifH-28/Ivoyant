@@ -13,31 +13,33 @@ interface id {
 }
 const EditModal: React.FC<id> = ({ id }) => {
   const { todo } = useFetch(id);
-  
 
   const [open, setOpen] = useState(false);
 
   const dispatch = useDispatch<Dispatch>();
   const [form] = Form.useForm();
-  useEffect(()=>{
-    if(todo){
-        form.setFieldsValue({
-            title: todo.title,
-            description: todo.description,
-            dueDate: todo.dueDate ? (todo.dueDate).toISOString : null,
-            time: todo.time,
-            priority: todo.priority,
-          })
-    }else{
-        form.setFieldsValue({title:"",description:"",status:"",dueDate:""})
+  useEffect(() => {
+    if (todo) {
+      form.setFieldsValue({
+        title: todo.title,
+        description: todo.description,
+        dueDate: todo.dueDate ? todo.dueDate.toISOString : null,
+        time: todo.time,
+        priority: todo.priority,
+      });
+    } else {
+      form.setFieldsValue({
+        title: "",
+        description: "",
+        status: "",
+        dueDate: "",
+      });
     }
-  },[todo])
+  }, [todo]);
 
   const showModal = () => {
     setOpen(true);
   };
-
-
 
   const handleCancel = (e: React.MouseEvent<HTMLElement>) => {
     setOpen(false);
@@ -46,7 +48,7 @@ const EditModal: React.FC<id> = ({ id }) => {
     const now = new Date();
     const AddDetails = {
       ...e,
-      id:id,
+      id: id,
       completed: false,
       createdAt: now.toDateString(),
       deleted: false,
@@ -59,15 +61,12 @@ const EditModal: React.FC<id> = ({ id }) => {
 
   return (
     <>
-      <Button
-        type="default"
-        onClick={showModal}
-        icon={<EditOutlined />}
-      >Edit</Button>
+      <Button type="default" onClick={showModal} icon={<EditOutlined />}>
+        Edit
+      </Button>
       <Modal
         title="Basic Modal"
         open={open}
-
         onCancel={handleCancel}
         okButtonProps={{ disabled: true }}
         cancelButtonProps={{ disabled: true }}
@@ -96,7 +95,11 @@ const EditModal: React.FC<id> = ({ id }) => {
           </Form.Item>
 
           <Form.Item name="dueDate" label="Due Date">
-            <DatePicker className="ant-picker" style={{ width: "100%" }} required/>
+            <DatePicker
+              className="ant-picker"
+              style={{ width: "100%" }}
+              required
+            />
           </Form.Item>
           <Form.Item name="time" label="time">
             <Input

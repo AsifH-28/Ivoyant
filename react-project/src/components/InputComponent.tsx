@@ -33,7 +33,7 @@ export default function InputComponent() {
       createdAt: now.toDateString(),
       deleted: false,
       pending: false,
-      dueDate: e.dueDate.toISOString(),
+      dueDate: e.dueDate as Date,
     };
     dispatch(AddTodo(AddDetails));
     form.resetFields();
@@ -65,7 +65,7 @@ export default function InputComponent() {
       </Form.Item>
 
       <Form.Item name="dueDate" label="Due Date">
-        <DatePicker className="ant-picker" style={{ width: "100%" }} />
+        <Input type="date" className="ant-picker" style={{ width: "100%" }} />
       </Form.Item>
       <Form.Item name="time" label="time">
         <Input type="time" className="ant-input" placeholder="Enter title" />
