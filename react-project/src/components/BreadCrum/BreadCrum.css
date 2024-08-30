@@ -1,0 +1,35 @@
+.breadcrumb-container {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+  }
+  
+  .breadcrumb-item {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .parent-link {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+    margin-bottom: 5px;
+  }
+  
+  .parent-link:hover {
+    color: #007bff;
+  }
+  
+  .child-link {
+    font-size: 16px;
+    color: #666;
+    text-decoration: none;
+    margin-left: 20px;
+  }
+  
+  .child-link:hover {
+    color: #007bff;
+  }
+  
