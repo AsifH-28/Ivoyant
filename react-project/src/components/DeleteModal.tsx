@@ -1,5 +1,5 @@
 import React, { ReactNode } from 'react';
-import { ExclamationCircleFilled } from '@ant-design/icons';
+import Icon, { DeleteFilled, DeleteOutlined, ExclamationCircleFilled } from '@ant-design/icons';
 import { Button, Modal, Space } from 'antd';
 import { useDispatch } from 'react-redux';
 import {DeleteTodo} from "../features/Todo"
@@ -36,7 +36,7 @@ const DeleteModal: React.FC<Custom> = ({id})=>{
         <Space wrap>
           <Button onClick={()=>{
               showConfirm(id,dispatch)
-          }}>Delete</Button>
+          }} icon={<DeleteOutlined />}>Delete</Button>
         </Space>
       );
     

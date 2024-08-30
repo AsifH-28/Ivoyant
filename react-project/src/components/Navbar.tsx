@@ -4,6 +4,9 @@ const NavBar: React.FC = () => {
   return (
     <NavBarContainer>
       <NavLinks>
+      <StyledLink to="/" className="active">
+          Add Task
+        </StyledLink>
         <StyledLink to="/all-tasks" className="active">
           All Tasks
         </StyledLink>

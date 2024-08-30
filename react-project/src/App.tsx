@@ -12,7 +12,7 @@ function App() {
       <Routes>
         <Route path="/" element={<InputComponent />} />
         <Route path="/all-tasks" element={<AllTask />} />
-        <Route path="completed-tasks" element={<CompletedTask />} />
+        <Route path="/completed-tasks" element={<CompletedTask />} />
       </Routes>
     </>
   );
