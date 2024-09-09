@@ -12,6 +12,7 @@ interface id {
   id: string;
 }
 const EditModal: React.FC<id> = ({ id }) => {
+  const today = new Date().toISOString().split('T')[0];
   const { todo } = useFetch(id);
 
   const [open, setOpen] = useState(false);
@@ -24,7 +25,6 @@ const EditModal: React.FC<id> = ({ id }) => {
         title: todo.title,
         description: todo.description,
         dueDate: todo.dueDate ? todo.dueDate.toISOString : null,
-        time: todo.time,
         priority: todo.priority,
       });
     } else {
@@ -53,7 +53,7 @@ const EditModal: React.FC<id> = ({ id }) => {
       createdAt: now.toDateString(),
       deleted: false,
       pending: false,
-      dueDate: e.dueDate.toISOString(),
+      dueDate: e.dueDate,
     };
     dispatch(UpdateTodo(AddDetails));
     setOpen(false);
@@ -95,10 +95,12 @@ const EditModal: React.FC<id> = ({ id }) => {
           </Form.Item>
 
           <Form.Item name="dueDate" label="Due Date">
-            <DatePicker
+            <Input
+            type="Date"
               className="ant-picker"
               style={{ width: "100%" }}
               required
+              min={today}
             />
           </Form.Item>
           <Form.Item name="time" label="time">

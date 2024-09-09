@@ -4,8 +4,7 @@ export interface Todo {
     description?: string;       
     completed: boolean;         
     createdAt: Date;           
-    dueDate?: Date;
-    time:string,             
+    dueDate?: Date;             
     priority?: 'low' | 'medium' | 'high';           
     deleted?: boolean;
     pending?:boolean;         

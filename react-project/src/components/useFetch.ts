@@ -10,6 +10,9 @@ export const useFetch = (id: string) => {
   useEffect(() => {
     const todoItem = todos.find((item) => item.id === id);
     setTodo(todoItem);
+    return () => {
+      setTodo(undefined);
+    };
   }, [id, todos]);
 
   return { todo };

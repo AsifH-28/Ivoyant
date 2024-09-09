@@ -1,4 +1,4 @@
-import { Form, Input, DatePicker, Select, Button } from "antd";
+import { Form, Input, Select, Button } from "antd";
 import "../Styeles/Input.scss";
 import { AddTodo } from "../features/Todo";
 import { useDispatch } from "react-redux";
@@ -10,11 +10,11 @@ const { TextArea } = Input;
 const { Option } = Select;
 
 export default function InputComponent() {
+  const today = new Date().toISOString().split('T')[0];
   const dispatch = useDispatch<Dispatch>();
   const navigate = useNavigate();
   const [form] = Form.useForm();
   const openNotification = (Title: string) => {
-   
     notification.open({
       message: `${Title}`,
       description: "Above Todo is Added click to see",
@@ -28,7 +28,7 @@ export default function InputComponent() {
     const now = new Date();
     const AddDetails = {
       ...e,
-      id: Math.random()+1,
+      id: Math.random() + 1,
       completed: false,
       createdAt: now.toDateString(),
       deleted: false,
@@ -65,10 +65,7 @@ export default function InputComponent() {
       </Form.Item>
 
       <Form.Item name="dueDate" label="Due Date">
-        <Input type="date" className="ant-picker" style={{ width: "100%" }} />
-      </Form.Item>
-      <Form.Item name="time" label="time">
-        <Input type="time" className="ant-input" placeholder="Enter title" />
+        <Input type="date" className="ant-picker" style={{ width: "100%" }} min={today} />
       </Form.Item>
 
       <Form.Item
