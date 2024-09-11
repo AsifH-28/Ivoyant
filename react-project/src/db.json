@@ -1,0 +1,21 @@
+{
+    "users":[{
+        "name":"asif",
+        "age":22,
+        "occupation":"software intern"
+    },
+    {
+        "name":"amogh",
+        "age":24,
+        "occupation":"software engineer"
+    },
+    {
+        "name":"manjunath",
+        "age":24,
+        "occupation":"software engineer"
+    }, {
+        "name":"likhith",
+        "age":24,
+        "occupation":"software engineer"
+    }]
+}
