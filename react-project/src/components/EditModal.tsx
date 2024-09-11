@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Button, Modal, Form, Input, Select, DatePicker } from "antd";
+import { Button, Modal, Form, Input, Select } from "antd";
 import { EditOutlined } from "@ant-design/icons";
 import { useDispatch } from "react-redux";
 import { UpdateTodo } from "../features/Todo";
@@ -65,7 +65,6 @@ const EditModal: React.FC<id> = ({ id }) => {
         Edit
       </Button>
       <Modal
-        title="Basic Modal"
         open={open}
         onCancel={handleCancel}
         okButtonProps={{ disabled: true }}
@@ -103,13 +102,6 @@ const EditModal: React.FC<id> = ({ id }) => {
               min={today}
             />
           </Form.Item>
-          <Form.Item name="time" label="time">
-            <Input
-              type="time"
-              className="ant-input"
-              placeholder="Enter title"
-            />
-          </Form.Item>
 
           <Form.Item
             name="priority"
@@ -133,7 +125,7 @@ const EditModal: React.FC<id> = ({ id }) => {
               htmlType="submit"
               block
             >
-              Add Todo
+              Update Todo
             </Button>
           </Form.Item>
         </Form>
