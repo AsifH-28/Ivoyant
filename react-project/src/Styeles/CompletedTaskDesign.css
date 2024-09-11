@@ -1,0 +1,51 @@
+.completed-task-container {
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+    background-color: #fcfcfc; 
+  }
+  
+  .main-card {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    margin: 0;
+    width: 80%;
+    background-color: #e6f7ff; 
+    border-radius: 10px; 
+  }
+  
+  .task-card {
+    margin-bottom: 20px;
+    background-color: #ffffff; 
+    border: 1px solid #b3d9ff; 
+    border-radius: 8px; 
+    transition: all 0.3s ease; 
+  }
+  
+  .task-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
+    border-color: #91d5ff; /* Slightly darker border on hover */
+  }
+  
+  .task-content {
+    padding: 16px;
+    color: #333;
+  }
+  
+  .description {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #595959; /* Slightly lighter text color */
+  }
+  
+  .status {
+    margin-top: 10px;
+  }
+  
+  .completed-status {
+    color: #1890ff; /* Light blue text color */
+    font-weight: bold;
+    font-size: 14px; /* Slightly smaller font size for status */
+    text-transform: uppercase; /* Uppercase text */
+  }
+  
