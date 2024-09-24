@@ -6,6 +6,9 @@ import './App.css'
 function App() {
   const [count, setCount] = useState(0)
   const worker = new Worker(new URL('./worker.js', import.meta.url));
+  const setDatainLocastorage = () => {
+    localStorage.setItem("token", "gdgsdgsdgs");
+  };
 
   worker.onmessage = function (event) {
     console.log("Result from worker:", event.data);
@@ -36,6 +39,7 @@ function App() {
         Click on the Vite and React logos to learn more
       </p>
       <p>hello</p>
+      <button onClick={setDatainLocastorage}>SetData</button>
     </>
   )
 }
