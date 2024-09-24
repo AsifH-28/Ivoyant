@@ -5,6 +5,13 @@ import './App.css'
 
 function App() {
   const [count, setCount] = useState(0)
+  const worker = new Worker(new URL('./worker.js', import.meta.url));
+
+  worker.onmessage = function (event) {
+    console.log("Result from worker:", event.data);
+  };
+
+  worker.postMessage(100000000); 
 
   return (
     <>
